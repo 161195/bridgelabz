@@ -1,0 +1,28 @@
+#!/bin/bash -x
+read -p " Enter Date:-" date
+read -p " Enter Month:-" Month
+
+case $Month in
+
+	1)Enter Month = jan ;;
+	2)Enter Month = feb ;;
+	3)Enter Month =march ;;
+	4)Enter Month =april ;;
+	5)Enter Month =may ;;
+	6)Enter Month =june ;;
+	7)Enter Month =july ;;
+	8)Enter Month =aug ;;
+	9)Enter Month =sept ;;
+	10)Enter Month =oct ;;
+	11)Enter Month =nov ;;
+	12)Enter Month =dec ;;
+ 
+esac
+
+if (( ($Month <= 6 && $date <= 20) && (($Month >= 3 && $date <= 20) && ($date<=31 && $Month <=12)) ))
+then
+        echo $Month $date "True";
+else
+
+        echo "False";
+fi
